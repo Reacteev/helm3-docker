@@ -17,6 +17,4 @@ COPY --from=build /usr/bin/helm /usr/bin/helm
 
 WORKDIR /app
 
-ENTRYPOINT ["helm"]
-CMD ["-h"]
-
+ENTRYPOINT [""]
