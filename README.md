@@ -4,23 +4,16 @@ This docker image comes with Helm3 and kubectl installed. You can specify the de
 
 ## Basic Usage Instructions
 
-### Default (prints Helm3 help)
+### Execute Helm3 command
 
 ```bash
-    docker run --rm -it reacteev/helm3
-
-```
-
-### Execute custom Helm3 command
-
-```bash
-docker run --rm -it --entrypoint "" reacteev/helm3 helm version
+docker run --rm -it reacteev/helm3 helm version
 
 ```
 
 ### Execute kubectl command
 
 ```bash
-docker run --rm -it --entrypoint "" reacteev/helm3 kubectl version
+docker run --rm -it reacteev/helm3 kubectl version
 
 ```
