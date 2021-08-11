@@ -1,6 +1,6 @@
 FROM bitnami/kubectl:latest
 
-ENV HELM_VERSION=3.4.1
+ENV HELM_VERSION=3.6.3
 ENV RELEASE_ROOT="https://get.helm.sh"
 ENV RELEASE_FILE="helm-v${HELM_VERSION}-linux-amd64.tar.gz"
 
@@ -19,5 +19,9 @@ ENV HOME=/home/helm
 
 USER helm
 WORKDIR /home/helm
+
+COPY helm-plugins.tar.gz .
+RUN tar zxvf helm-plugins.tar.gz
+RUN rm -f helm-plugins.tar.gz
 
 ENTRYPOINT [""]
